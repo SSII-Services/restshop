@@ -1,8 +1,7 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import { HiCalendar } from 'react-icons/hi'
-import { BiBus, BiDollarCircle, BiSupport } from 'react-icons/bi'
-import { FaFacebookF, FaTwitter, FaInstagram, FaGithub, FaYoutube, FaTelegramPlane, FaXRay, FaDiscord } from 'react-icons/fa'
+import { FaFacebookF, FaGithub, FaTelegramPlane, FaDiscord } from 'react-icons/fa'
 
 export const Footer = () => {
     return (
@@ -121,14 +120,14 @@ export const Footer = () => {
                         <FaFacebookF className="w-6 h-6 text-white" aria-hidden="true" />
                     </a>
                     <a
-                        href="#"
+                        href="https://github.com/Wilson635"
                         target="_blank"
                         className="flex items-center justify-center w-10 h-10 transition-colors bg-red-400 rounded-full hover:bg-red-600"
                     >
                         <FaGithub className="w-6 h-6 text-white" aria-hidden="true" />
                     </a>
                     <a
-                        href="#"
+                        href="https://t.me/SSIIServices"
                         target="_blank"
                         className="flex items-center justify-center w-10 h-10 transition-colors bg-red-400 rounded-full hover:bg-red-600"
                     >

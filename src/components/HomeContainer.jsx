@@ -6,18 +6,18 @@ import { heroData } from "../utils/data";
 const HomeContainer = () => {
   return (
     <section
-      className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full "
+      className="grid w-full grid-cols-1 gap-2 md:grid-cols-2 "
       id="home"
     >
-      <div className="py-2 flex-1 flex flex-col items-start justify-center gap-6">
-        <div className="flex items-center gap-2 justify-center bg-blue-100 px-4 py-1 rounded-full">
-          <p className="text-base text-blue-500 font-semibold">
+      <div className="flex flex-col items-start justify-center flex-1 gap-6 py-2">
+        <div className="flex items-center justify-center gap-2 px-4 py-1 bg-blue-100 rounded-full">
+          <p className="text-base font-semibold text-blue-500">
             Bike Delivery
           </p>
-          <div className="w-8 h-8 bg-white rounded-full overflow-hidden drop-shadow-xl">
+          <div className="w-8 h-8 overflow-hidden bg-white rounded-full drop-shadow-xl">
             <img
               src={Delivery}
-              className="w-full h-full object-contain"
+              className="object-contain w-full h-full"
               alt="delivery"
             />
           </div>
@@ -39,31 +39,31 @@ const HomeContainer = () => {
 
         <button
           type="button"
-          className="bg-gradient-to-br from-blue-400 to-blue-500 w-full md:w-auto px-4 py-2 text-white rounded-lg hover:shadow-lg transition-all ease-in-out duration-100"
+          className="w-full px-4 py-2 text-white transition-all duration-100 ease-in-out rounded-lg bg-gradient-to-br from-blue-400 to-blue-500 md:w-auto hover:shadow-lg"
         >
           Order Now
         </button>
       </div>
-      <div className="py-2 flex-1 flex items-center relative">
+      <div className="relative flex items-center flex-1 py-2">
         <img
           src={HeroBg}
-          className=" ml-auto h-420 w-full lg:w-auto lg:h-650"
+          className="w-full ml-auto h-420 lg:w-auto lg:h-650"
           alt="hero-bg"
         />
 
-        <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center p-2 gap-4 flex-wrap">
+        <div className="absolute top-0 left-0 flex flex-wrap items-center justify-center w-full h-full gap-4 p-2 xl:gap-7 xl:">
           {heroData &&
             heroData.map((n) => (
               <div
                 key={n.id}
-                className="  lg:w-190  p-4 bg-cardOverlay backdrop-blur-md rounded-3xl flex flex-col items-center justify-center drop-shadow-lg"
+                className="flex flex-col items-center justify-center p-4 lg:w-190 bg-cardOverlay backdrop-blur-md rounded-3xl drop-shadow-lg"
               >
                 <img
                   src={n.imageSrc}
-                  className="w-20 lg:w-40 -mt-10 lg:-mt-20 "
+                  className="w-20 -mt-10 lg:w-40 lg:-mt-20 "
                   alt="I1"
                 />
-                <p className="text-base lg:text-xl font-semibold text-textColor mt-2 lg:mt-4">
+                <p className="mt-2 text-base font-semibold lg:text-xl text-textColor lg:mt-4">
                   {n.name}
                 </p>
 
