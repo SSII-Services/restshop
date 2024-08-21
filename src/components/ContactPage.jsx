@@ -12,10 +12,10 @@ import {
 } from "react-icons/bi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import {Helmet} from "./helmet/Helmet";
-import { NewsLetter } from './UI/NewsLetter';
+// import { NewsLetter } from './UI/NewsLetter';
 import CartContainer from "./CartContainer";
 import { useStateValue } from "../context/StateProvider";
-import { Footer } from './UI/Footer';
+// import { Footer } from './UI/Footer';
 
 
 
@@ -158,7 +158,7 @@ export const ContactPage = () => {
                 </div>
             </div>
             {/* <NewsLetter /> */}
-            <Footer />
+            {/* <Footer /> */}
             {cartShow && <CartContainer />}
         </Helmet>
     );

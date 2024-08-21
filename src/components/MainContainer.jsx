@@ -25,21 +25,21 @@ const MainContainer = () => {
 
           <section className="w-full my-6">
             <div className="flex items-center justify-between w-full">
-              <p className="relative text-2xl font-semibold capitalize transition-all duration-100 ease-in-out text-headingColor before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-blue-400 to-blue-600">
+              <p className="relative text-2xl font-semibold capitalize transition-all duration-100 ease-in-out text-headingColor before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-red-400 to-red-600">
                 Our fresh & healthy fruits
               </p>
 
               <div className="items-center hidden gap-3 md:flex">
                 <motion.div
                     whileTap={{ scale: 0.75 }}
-                    className="flex items-center justify-center w-8 h-8 bg-blue-300 rounded-lg cursor-pointer hover:bg-blue-500 hover:shadow-lg"
+                    className="flex items-center justify-center w-8 h-8 bg-red-300 rounded-lg cursor-pointer hover:bg-red-500 hover:shadow-lg"
                     onClick={() => setScrollValue(-200)}
                 >
                   <MdChevronLeft className="text-lg text-white" />
                 </motion.div>
                 <motion.div
                     whileTap={{ scale: 0.75 }}
-                    className="flex items-center justify-center w-8 h-8 transition-all duration-100 ease-in-out bg-blue-300 rounded-lg cursor-pointer hover:bg-blue-500 hover:shadow-lg"
+                    className="flex items-center justify-center w-8 h-8 transition-all duration-100 ease-in-out bg-red-300 rounded-lg cursor-pointer hover:bg-red-500 hover:shadow-lg"
                     onClick={() => setScrollValue(200)}
                 >
                   <MdChevronRight className="text-lg text-white" />

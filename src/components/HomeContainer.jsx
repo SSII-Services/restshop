@@ -10,8 +10,8 @@ const HomeContainer = () => {
       id="home"
     >
       <div className="flex flex-col items-start justify-center flex-1 gap-6 py-2">
-        <div className="flex items-center justify-center gap-2 px-4 py-1 bg-blue-100 rounded-full">
-          <p className="text-base font-semibold text-blue-500">
+        <div className="flex items-center justify-center gap-2 px-4 py-1 bg-red-100 rounded-full">
+          <p className="text-base font-semibold text-red-500">
             Bike Delivery
           </p>
           <div className="w-8 h-8 overflow-hidden bg-white rounded-full drop-shadow-xl">
@@ -25,7 +25,7 @@ const HomeContainer = () => {
 
         <p className="text-[2.5rem] lg:text-[4.5rem] font-bold tracking-wide text-headingColor">
           The Fastest Delivery in
-          <span className="text-blue-600 text-[3rem] lg:text-[5rem]">
+          <span className="text-red-400 text-[3rem] lg:text-[5rem]">
             Your City
           </span>
         </p>
@@ -39,7 +39,7 @@ const HomeContainer = () => {
 
         <button
           type="button"
-          className="w-full px-4 py-2 text-white transition-all duration-100 ease-in-out rounded-lg bg-gradient-to-br from-blue-400 to-blue-500 md:w-auto hover:shadow-lg"
+          className="w-full py-2 text-white transition-all duration-100 ease-in-out rounded-lg px-9 bg-gradient-to-br from-red-400 to-red-500 md:w-auto hover:shadow-lg"
         >
           Order Now
         </button>

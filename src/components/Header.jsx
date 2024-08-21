@@ -7,7 +7,7 @@ import {
   MdList,
   MdSupervisedUserCircle,
   MdRoomService,
-  MdContacts, MdPersonPinCircle, MdAccountCircle
+  MdContacts, MdAccountCircle
 } from "react-icons/md";
 import { motion } from "framer-motion";
 
@@ -64,10 +64,10 @@ const Header = () => {
   return (
     <header className="fixed z-50 w-screen p-3 px-4 md:p-6 md:px-16 bg-primary">
       {/* desktop & tablet */}
-      <div className="hidden md:flex w-full h-full items-center justify-between">
+      <div className="items-center justify-between hidden w-full h-full md:flex">
         <Link to={"/"} className="flex items-center gap-2">
-          <img src={Logo} className="w-8 object-cover" alt="logo" />
-          <p className="text-headingColor text-xl font-bold"> RestShop </p>
+          <img src={Logo} className="object-cover w-8" alt="logo" />
+          <p className="text-xl font-bold text-headingColor"> RestShop </p>
         </Link>
 
         <div className="flex items-center gap-8">
@@ -77,19 +77,19 @@ const Header = () => {
             exit={{ opacity: 0, x: 200 }}
             className="flex items-center gap-20 "
           >
-            <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+            <li className="text-lg transition-all duration-100 ease-in-out cursor-pointer text-textColor hover:text-headingColor">
               <Link to="/"> Home </Link>
             </li>
-            <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+            <li className="text-lg transition-all duration-100 ease-in-out cursor-pointer text-textColor hover:text-headingColor">
               <Link to="/menu"> Menu </Link>
             </li>
-            <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+            <li className="text-lg transition-all duration-100 ease-in-out cursor-pointer text-textColor hover:text-headingColor">
               <Link to="/about"> About Us </Link>
             </li>
-            <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+            <li className="text-lg transition-all duration-100 ease-in-out cursor-pointer text-textColor hover:text-headingColor">
               <Link to="/service"> Service </Link>
             </li>
-            <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+            <li className="text-lg transition-all duration-100 ease-in-out cursor-pointer text-textColor hover:text-headingColor">
               <Link to="/contact"> Contact </Link>
             </li>
           </motion.ul>
@@ -98,10 +98,10 @@ const Header = () => {
             className="relative flex items-center justify-center"
             onClick={showCart}
           >
-            <MdShoppingBasket className="text-textColor text-2xl  cursor-pointer" />
+            <MdShoppingBasket className="text-2xl cursor-pointer text-textColor" />
             {cartItems && cartItems.length > 0 && (
-              <div className=" absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
-                <p className="text-xs text-white font-semibold">
+              <div className="absolute flex items-center justify-center w-5 h-5 rounded-full -top-2 -right-2 bg-cartNumBg">
+                <p className="text-xs font-semibold text-white">
                   {cartItems.length}
                 </p>
               </div>
@@ -121,20 +121,20 @@ const Header = () => {
                 initial={{ opacity: 0, scale: 0.6 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.6 }}
-                className="min-w-210 bg-gray-50 shadow-xl rounded-lg flex flex-col absolute top-12 right-0"
+                className="absolute right-0 flex flex-col rounded-lg shadow-xl min-w-210 bg-gray-50 top-12"
               >
-                <p className="flex m-2 p-2  flex items-center justify-center gap-3 transition-all duration-100 ease-in-out text-textColor text-base">
+                <p className="flex items-center justify-center gap-3 p-2 m-2 text-base transition-all duration-100 ease-in-out text-textColor">
                   <img src={user ? user.photoURL : Avatar} alt="" className="w-10 min-w-[40px] h-10 min-h-[40px] rounded-full shadow-2xl"/>
                   <div className="flex flex-col">
                     <span> {user ? user.displayName : Avatar} </span>
-                    <p className="justify-center items-center font-light text-xs"> {user ? user.email : Avatar} </p>
+                    <p className="items-center justify-center text-xs font-light"> {user ? user.email : Avatar} </p>
                   </div>
                 </p>
                 <hr className="border-dashed"/>
                 {user && user.email === "ngahemeniw@gmail.com" && (
                   <Link to={"/createItem"}>
                     <p
-                      className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base"
+                      className="flex items-center gap-3 px-4 py-2 text-base transition-all duration-100 ease-in-out cursor-pointer hover:bg-slate-100 text-textColor"
                       onClick={() => setIsMenu(false)}
                     >
                       New Item <MdAdd />
@@ -144,14 +144,14 @@ const Header = () => {
 
                 <Link to={"/profile"}>
                   <p
-                      className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base"
+                      className="flex items-center gap-3 px-4 py-2 text-base transition-all duration-100 ease-in-out cursor-pointer hover:bg-slate-100 text-textColor"
                       onClick={() => setIsMenu(false)}
                   >
                     Profile <MdAccountCircle />
                   </p>
                 </Link>
                 <p
-                  className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base"
+                  className="flex items-center gap-3 px-4 py-2 text-base transition-all duration-100 ease-in-out cursor-pointer hover:bg-slate-100 text-textColor"
                   onClick={logout}
                 >
                   Logout <MdLogout />
@@ -163,15 +163,15 @@ const Header = () => {
       </div>
 
       {/* mobile */}
-      <div className="flex items-center justify-between md:hidden w-full h-full ">
+      <div className="flex items-center justify-between w-full h-full md:hidden ">
         <div
           className="relative flex items-center justify-center"
           onClick={showCart}
         >
-          <MdShoppingBasket className="text-textColor text-2xl  cursor-pointer" />
+          <MdShoppingBasket className="text-2xl cursor-pointer text-textColor" />
           {cartItems && cartItems.length > 0 && (
-            <div className=" absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
-              <p className="text-xs text-white font-semibold">
+            <div className="absolute flex items-center justify-center w-5 h-5 rounded-full -top-2 -right-2 bg-cartNumBg">
+              <p className="text-xs font-semibold text-white">
                 {cartItems.length}
               </p>
             </div>
@@ -179,8 +179,8 @@ const Header = () => {
         </div>
 
         <Link to={"/"} className="flex items-center gap-2">
-          <img src={Logo} className="w-8 object-cover" alt="logo" />
-          <p className="text-headingColor text-xl font-bold"> RestShop</p>
+          <img src={Logo} className="object-cover w-8" alt="logo" />
+          <p className="text-xl font-bold text-headingColor"> RestShop</p>
         </Link>
 
         <div className="relative">
@@ -196,51 +196,51 @@ const Header = () => {
               initial={{ opacity: 0, scale: 0.6 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.6 }}
-              className="min-w-210 bg-gray-50 shadow-xl rounded-lg flex flex-col absolute top-12 right-0"
+              className="absolute right-0 flex flex-col rounded-lg shadow-xl min-w-210 bg-gray-50 top-12"
             >
 
 
               <ul className="flex flex-col ">
-                <p className="flex m-2 p-2  flex items-center justify-center gap-3 transition-all duration-100 ease-in-out text-textColor text-base">
+                <p className="flex items-center justify-center gap-3 p-2 m-2 text-base transition-all duration-100 ease-in-out text-textColor">
                   <img src={user ? user.photoURL : Avatar} alt="" className="w-10 min-w-[40px] h-10 min-h-[40px] rounded-full shadow-2xl"/>
                   <div className="flex flex-col">
                     <span> {user ? user.displayName : Avatar} </span>
-                    <p className="justify-center items-center font-light text-xs"> {user ? user.email : Avatar} </p>
+                    <p className="items-center justify-center text-xs font-light"> {user ? user.email : Avatar} </p>
                   </div>
                 </p>
-                <hr className="border-dashed px-2"/>
+                <hr className="px-2 border-dashed"/>
                 <Link to="/"
                       onClick={() => setIsMenu(false)}
-                      className="p-3 flex items-center hover:text-headingColor gap-3 cursor-pointer transition-all duration-100 ease-in-out hover:bg-slate-100 text-textColor text-base"
+                      className="flex items-center gap-3 p-3 text-base transition-all duration-100 ease-in-out cursor-pointer hover:text-headingColor hover:bg-slate-100 text-textColor"
                 > <MdHome /> Home </Link>
                 <Link to="/menu"
                       onClick={() => setIsMenu(false)}
-                      className="p-3 flex items-center hover:text-headingColor gap-3 cursor-pointer transition-all duration-100 ease-in-out hover:bg-slate-100 text-textColor text-base"
+                      className="flex items-center gap-3 p-3 text-base transition-all duration-100 ease-in-out cursor-pointer hover:text-headingColor hover:bg-slate-100 text-textColor"
                 > <MdList /> Menu </Link>
                 <Link to="/about"
                       onClick={() => setIsMenu(false)}
-                      className="p-3 flex items-center hover:text-headingColor gap-3 cursor-pointer transition-all duration-100 ease-in-out hover:bg-slate-100 text-textColor text-base"
+                      className="flex items-center gap-3 p-3 text-base transition-all duration-100 ease-in-out cursor-pointer hover:text-headingColor hover:bg-slate-100 text-textColor"
                 > <MdSupervisedUserCircle /> About Us </Link>
                 <Link to="/services"
                       onClick={() => setIsMenu(false)}
-                      className="p-3 flex items-center hover:text-headingColor gap-3 cursor-pointer transition-all duration-100 ease-in-out hover:bg-slate-100 text-textColor text-base"
+                      className="flex items-center gap-3 p-3 text-base transition-all duration-100 ease-in-out cursor-pointer hover:text-headingColor hover:bg-slate-100 text-textColor"
                 > <MdRoomService /> Service </Link>
                 <Link to="/services"
                       onClick={() => setIsMenu(false)}
-                      className="p-3 flex items-center hover:text-headingColor gap-3 cursor-pointer transition-all duration-100 ease-in-out hover:bg-slate-100 text-textColor text-base"
+                      className="flex items-center gap-3 p-3 text-base transition-all duration-100 ease-in-out cursor-pointer hover:text-headingColor hover:bg-slate-100 text-textColor"
                 > <MdContacts /> Contact </Link>
               </ul>
 
               {user && user.email === "ngahemeniw@gmail.com" && (
                   <Link to={"/createItem"}>
-                    <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base">
+                    <p className="flex items-center gap-3 px-4 py-2 text-base transition-all duration-100 ease-in-out cursor-pointer hover:bg-slate-100 text-textColor">
                       New Item <MdAdd />
                     </p>
                   </Link>
               )}
 
               <p
-                className="m-2 p-2 rounded-md shadow-md flex items-center justify-center bg-gray-200 gap-3 cursor-pointer hover:bg-gray-300 transition-all duration-100 ease-in-out text-textColor text-base"
+                className="flex items-center justify-center gap-3 p-2 m-2 text-base transition-all duration-100 ease-in-out bg-gray-200 rounded-md shadow-md cursor-pointer hover:bg-gray-300 text-textColor"
                 onClick={logout}
               >
                 Logout <MdLogout />
