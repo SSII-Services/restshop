@@ -14,11 +14,11 @@ export default function HeroAbout() {
                 <div className="relative w-full mx-auto sm:static">
                     <div className="sm:max-w-xl">
                         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                            Summer styles are finally here
+                            The Heart Behind the Flavor
                         </h1>
                         <p className="mt-4 text-xl text-gray-500">
-                            This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
-                            if you live or die.
+                            From our kitchen to your table, we bring you carefully crafted dishes, 
+                            combining tradition and innovation to create memorable dining experiences.
                         </p>
                     </div>
                     <div>
@@ -91,7 +91,7 @@ export default function HeroAbout() {
 
                             <a
                                 href="#"
-                                className="inline-block px-8 py-3 font-medium text-center text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700"
+                                className="inline-block px-8 py-3 font-medium text-center text-white bg-red-400 border border-transparent rounded-md hover:bg-red-600"
                             >
                                 Shop Collection
                             </a>
