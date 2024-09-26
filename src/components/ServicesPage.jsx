@@ -71,17 +71,17 @@ export const ServicesPage = () => {
                 {/* <!-- Grid --> */}
                 <div class="mt-20 grid grid-cols-12 items-center gap-x-2 sm:gap-x-6 lg:gap-x-8">
                     <div class="hidden md:block col-span-4 md:col-span-3">
-                        <img class="rounded-xl" src="https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=920&q=80" alt="Features Image" />
+                        <img class="rounded-xl" src="https://img.freepik.com/free-photo/reserved-dining-table_53876-94937.jpg?t=st=1726221071~exp=1726224671~hmac=3c84f66f92047cb9ffc2f88ab64937a3918c14c7ea8ad621874c499acc5eedbf&w=900" alt="Features Image" />
                     </div>
                     {/* <!-- End Col --> */}
 
                     <div class="col-span-4 md:col-span-3">
-                        <img class="rounded-xl" src="https://images.unsplash.com/photo-1587613991119-fbbe8e90531d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=920&q=80" alt="Features Image" />
+                        <img class="rounded-xl" src="https://img.freepik.com/free-psd/delivery-character-with-scooter-with-face-mask-3d-illustration_1419-3018.jpg?t=st=1726221477~exp=1726225077~hmac=b56e8d55ef1aec5966fccf51b9bcb0c0f13a2f7e9b421f25d74a0d90b9616f32&w=740" alt="Features Image" />
                     </div>
                     {/* <!-- End Col --> */}
 
                     <div class="col-span-4 md:col-span-3">
-                        <img class="rounded-xl" src="https://images.unsplash.com/photo-1554295405-abb8fd54f153?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=920&q=80" alt="Features Image" />
+                        <img class="rounded-xl" src="https://img.freepik.com/free-vector/preparing-feast-isometric-illustration_1284-21168.jpg?t=st=1726221727~exp=1726225327~hmac=d701f89f1180659de5fda2d1b0231cdbb78313468df79647b5aaf7836f811e95&w=740" alt="Features Image" />
                     </div>
                     {/* <!-- End Col --> */}
 
